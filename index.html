@@ -7,12 +7,12 @@
 <p> I will be using my late week for this assignment </p>
 <p id="ex1"> x </p>
 <script>
-//var q = task1(3);
-function task1(x){
-  return ((5 * x) - (3 * x ** 2) + 13);
-}
-document.getElementById("ex1").innerHTML = task1(3);
- </script>
+  //var q = task1(3);
+  function task1(x){
+    return ((5 * x) - (3 * x ** 2) + 13);
+  }
+  document.getElementById("ex1").innerHTML = task1(3);
+</script>
 
 <p id="ex2">x</p>
 <script>
@@ -27,15 +27,17 @@ document.getElementById("ex1").innerHTML = task1(3);
 <script>
 
 function task3(g, h){
-if (g > h) {
-  return "bananas".fontcolor("yellow");
-} else if (g < h) {
-  return "porcupine".fontcolor("brown");
+  if (g > h) {
+    return "bananas".fontcolor("yellow");
+  }
+  else if (g < h) {
+    return "porcupine".fontcolor("brown");
+  }
+  else if ( g == h && g < 0 && h < 0){
+    return "apples".fontcolor("red");
 }
-else if ( g == h && g < 0 && h < 0){
-  return "apples".fontcolor("red");
-} else {
-  return "green apples".fontcolor("green");
+  else {
+    return "green apples".fontcolor("green");
 }}
   document.getElementById("ex3").innerHTML = task3(3,4)
 </script>
@@ -43,30 +45,24 @@ else if ( g == h && g < 0 && h < 0){
 <p id="ex4">x</p>
 <script>
 
-
-  function task4(para1, para2){
-  var correct = input.style.color = '#66CD00';
-  var incorrect = input.style.color = '#FF0000';
-  var inp = "123456787654";
-  var pos4 = inp.startswith(1);
-  var inp4 = txt.length;
-  if(para1 == 10)
+  var inp4 = "123456787654";
+  var pos4 = inp4.startswith("1");
+  function task4(u,s){
+    if(u.length === 10)
       {
-         document.getElementById("ex4").innerHTML = correct;
-  }
-  else if (para1 == 11 && para2 == true){
-    document.getElementById("ex4").innerHTML = correct;
-  }
-
-  else
+    return u.fontcolor("green");
+    }
+    else if (u.length === 11 && Boolean(s) == true){
+    return u.fontcolor("green");
+    }
+    else
      {
-         document.getElementById("textbox").innerHTML = incorrect;
+      return u.fontcolor("red");
      }
+   ;}
 
-  };
-  document.getElementById("ex4").innerHTML = task4(inp, pos4);
-  </script>
-
+  document.getElementById("ex4").innerHTML = task4(inp4,pos4);
+</script>
 
 <p id="ex5">x</p>
 <script>
